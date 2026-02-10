@@ -1,0 +1,19 @@
+namespace: prod
+
+resources:
+  - ../../base
+  - namespace.yaml
+  - hpa.yaml
+
+nameSuffix: -prod
+
+replicas:
+  - name: login-service
+    count: 3
+
+images:
+  - name: mad855/login-service
+    newTag: prod
+
+patchesStrategicMerge:
+  - resource-limit-patch.yaml

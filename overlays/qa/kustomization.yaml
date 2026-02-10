@@ -1,0 +1,15 @@
+namespace: qa
+
+resources:
+  - ../../base
+  - namespace.yaml
+
+nameSuffix: -qa
+
+replicas:
+  - name: login-service
+    count: 2
+
+images:
+  - name: mad855/login-service
+    newTag: qa

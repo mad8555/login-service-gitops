@@ -1,0 +1,15 @@
+namespace: dev
+
+resources:
+  - ../../base
+  - namespace.yaml
+
+nameSuffix: -dev
+
+replicas:
+  - name: login-service
+    count: 1
+
+images:
+  - name: mad855/login-service
+    newTag: dev
