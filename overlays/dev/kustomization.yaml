@@ -1,15 +1,18 @@
 namespace: dev
 
 resources:
-  - ../../base
-  - namespace.yaml
+- ../../base
+- namespace.yaml
 
 nameSuffix: -dev
 
 replicas:
-  - name: login-service
-    count: 1
+- count: 1
+  name: login-service
 
 images:
-  - name: mad855/login-service
-    newTag: dev
+- name: mad855/login-service
+  newName: mad855/login-service
+  newTag: dev-b605633
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
