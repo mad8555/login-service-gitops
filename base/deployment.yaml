@@ -16,4 +16,4 @@ spec:
         - name: login-service
           image: mad855/login-service:latest
           ports:
-            - containerPort: 3000
+            - containerPort: 8087
