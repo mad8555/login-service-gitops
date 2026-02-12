@@ -12,7 +12,7 @@ replicas:
 images:
 - name: mad855/login-service
   newName: mad855/login-service
-  newTag: prod-b18e375
+  newTag: prod-ebd83a2
 
 patchesStrategicMerge:
 - resource-limit-patch.yaml
