@@ -11,6 +11,6 @@ replicas:
 images:
 - name: mad855/login-service
   newName: mad855/login-service
-  newTag: qa-d4ab291
+  newTag: qa-0b6856f
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
