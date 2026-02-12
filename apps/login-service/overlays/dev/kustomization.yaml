@@ -1,22 +1,16 @@
-namespace: prod
-
 resources:
 - ../../base
 - namespace.yaml
-- hpa.yaml
 
-nameSuffix: -prod
+nameSuffix: -dev
 
 replicas:
-- count: 3
+- count: 1
   name: login-service
 
 images:
 - name: mad855/login-service
   newName: mad855/login-service
-  newTag: prod-b18e375
-
-patchesStrategicMerge:
-- resource-limit-patch.yaml
+  newTag: dev-1f2958b
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization

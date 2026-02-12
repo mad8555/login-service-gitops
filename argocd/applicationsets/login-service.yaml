@@ -15,12 +15,12 @@ spec:
     metadata:
       name: login-service-{{env}}
     spec:
-      project: default
+      project: "{{env}}"
 
       source:
         repoURL: https://github.com/mad8555/login-service-gitops.git
         targetRevision: HEAD
-        path: overlays/{{env}}
+        path: apps/login-service/overlays/{{env}}
 
       destination:
         server: https://kubernetes.default.svc
